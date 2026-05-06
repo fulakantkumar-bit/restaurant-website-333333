@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -97,249 +97,236 @@
     </script>
 <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+            vertical-align: middle;
         }
         .glass-card {
             background: rgba(26, 26, 26, 0.8);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(233, 195, 73, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(19, 19, 19, 0.4), rgba(19, 19, 19, 1));
+        .luminous-accent {
+            box-shadow: 0 0 20px rgba(242, 202, 80, 0.1);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md">
-<!-- TopAppBar -->
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-surface/90 border-b border-outline-variant/20">
-<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
 <div class="font-h3 text-h3 font-bold text-primary dark:text-primary tracking-tighter uppercase">ROYAL TASTE</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-body-md text-body-md uppercase tracking-widest text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
 <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Menu</a>
 <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
 <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
-</div>
-<div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">shopping_cart</button>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-caps uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Book a Table</button>
-</div>
 </nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform">shopping_cart</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps uppercase scale-95 active:scale-90 transition-transform">Book a Table</button>
+</div>
+</div>
 </header>
-<main>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Premium Dining Hero" class="w-full h-full object-cover" data-alt="A cinematic, low-angle shot of a gourmet dish featuring seared scallops and edible gold leaf, presented on a dark slate plate. The scene is set in a dimly lit, high-end restaurant with warm amber spotlighting highlighting the textures of the food. The background is softly blurred, showing glimpses of polished mahogany and crystal glassware. The overall aesthetic is opulent, minimalist, and deeply focused on culinary craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSkR8-2isIcuK4CN9F_FGABEVDUfhPyiSu3iSA4uO_IecF8rJdBpbiYwYyei3EQw7IECL6mHoAfq0ha-sKt82BK4lRazlT31jYd-5mrvOY58c1_KCkS_XAqvHY7E9VJ9QQUgcEx_Ol1gFhHkS3zj-Uj9jIDUAscQBgQHat1CPlevrc8anQYuQK7wOcVx5pOKe1sEcVt7hlY_diKUiVJNpTeG1ENo7ddUwggwEC_qdvFnOaTq_FGK7yM_c5NOupKDSmb1I7DNyOz7s"/>
-<div class="absolute inset-0 hero-gradient"></div>
+<main class="pt-[100px] pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Checkout Form Section -->
+<div class="lg:col-span-8 space-y-8">
+<section>
+<h1 class="font-h1 text-h1 text-primary mb-8 tracking-tighter">Checkout</h1>
+<div class="space-y-12">
+<!-- Customer Details -->
+<div class="glass-card p-8 rounded-xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">person</span>
+<h2 class="font-h2 text-h2 text-on-surface">Customer Details</h2>
 </div>
-<div class="relative z-10 text-center px-margin-mobile">
-<span class="font-label-caps text-primary tracking-[0.3em] uppercase mb-4 block">Est. 1984</span>
-<h1 class="font-h1 text-h1 md:text-[80px] leading-tight text-on-surface mb-8 max-w-4xl mx-auto">The Art of <br/><span class="text-primary italic">Exquisite Dining</span></h1>
-<div class="flex flex-col md:flex-row gap-gutter justify-center items-center">
-<button class="bg-primary text-on-primary px-10 py-4 rounded-DEFAULT font-label-caps uppercase tracking-widest hover:brightness-110 transition-all scale-100 hover:scale-105 active:scale-95">Explore the Menu</button>
-<button class="border border-primary text-primary px-10 py-4 rounded-DEFAULT font-label-caps uppercase tracking-widest hover:bg-primary/10 transition-all">Private Events</button>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Full Name</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="Julianne Moore" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Email Address</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="j.moore@haute-cuisine.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Phone Number</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Delivery Address</label>
+<textarea class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all resize-none" placeholder="Penthouse 42, 5th Avenue, New York, NY 10022" rows="2"></textarea>
+</div>
+</div>
+</div>
+<!-- Payment Selection -->
+<div class="glass-card p-8 rounded-xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h2 class="font-h2 text-h2 text-on-surface">Payment Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex items-center p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-variant/20 transition-all">
+<input checked="" class="w-4 h-4 text-primary bg-transparent border-outline-variant focus:ring-primary ring-offset-background" name="payment" type="radio"/>
+<div class="ml-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface">credit_card</span>
+<span class="font-body-md">Credit Card</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-variant/20 transition-all">
+<input class="w-4 h-4 text-primary bg-transparent border-outline-variant focus:ring-primary ring-offset-background" name="payment" type="radio"/>
+<div class="ml-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface">ios</span>
+<span class="font-body-md">Apple Pay</span>
+</div>
+</label>
+</div>
+<div class="mt-8 space-y-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Card Number</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="XXXX XXXX XXXX 4444" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Expiry Date</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="MM/YY" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-on-surface-variant uppercase">CVV</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-2 outline-none transition-all" placeholder="***" type="text"/>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
-<!-- Featured Dishes -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="flex justify-between items-end mb-16">
+</div>
+<!-- Order Summary Section -->
+<aside class="lg:col-span-4 sticky top-28">
+<div class="glass-card p-8 rounded-xl border-primary/20 luminous-accent">
+<h3 class="font-h3 text-h3 text-primary mb-6 border-b border-outline-variant/30 pb-4">Order Summary</h3>
+<div class="space-y-6 mb-8">
+<div class="flex justify-between items-start">
 <div>
-<span class="font-label-caps text-primary tracking-widest uppercase mb-2 block">Chef's Selection</span>
-<h2 class="font-h2 text-h2 text-on-surface">Signature Creations</h2>
+<p class="font-body-md text-on-surface font-semibold">Truffle Infused Filet Mignon</p>
+<p class="text-xs text-on-surface-variant">Rare, extra truffle shaving</p>
 </div>
-<a class="text-primary border-b border-primary pb-1 font-label-caps uppercase tracking-widest hover:text-secondary transition-colors" href="#">View All Dishes</a>
+<p class="font-body-md text-primary">$84.00</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Dish Card 1 -->
-<div class="glass-card group cursor-pointer overflow-hidden rounded-xl transition-all hover:-translate-y-2">
-<div class="h-80 overflow-hidden relative">
-<img alt="Wagyu Reserve" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up photography of a perfectly seared ribeye steak topped with herb butter and artisanal sea salt. The lighting is dramatic and high-contrast, emphasizing the rich textures and deep colors of the meat against a black ceramic background. The mood is sophisticated and indulgent, aligning with a luxury dark-themed UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrAFI0BldfnOVQW4Iyph7Vaow99kQ6Sdx6qUcVWx1LEerZdXkJhNddZO_AzVYWkhsTSva5gyFlUeOxROPVE2mG9ynl3I9uTnAtRCmFuja9ToIaVEnn4J1mMYGAPFxCigzL-flh6iIwjv9ivSRbjBY3WiEGei4InjZ-vkzA8_raz1XPFjJu7sE9kwC3xJrcWKaspQbKZCwcrNi1FkhID163JjVmeqHUYr1lSI65WgM0HrcqAY3kxspT3MXnT4k-bUAnDbEvCG4IRw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-</div>
-<div class="p-8">
-<div class="flex justify-between items-start mb-4">
-<h3 class="font-h3 text-h3 text-on-surface">Wagyu Reserve</h3>
-<span class="text-primary font-h3">$120</span>
-</div>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">A5 grade Kagoshima beef, aged for 30 days, served with truffle-infused jus and smoked seasonal root vegetables.</p>
-<button class="flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest hover:gap-4 transition-all">
-                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Dish Card 2 -->
-<div class="glass-card group cursor-pointer overflow-hidden rounded-xl transition-all hover:-translate-y-2">
-<div class="h-80 overflow-hidden relative">
-<img alt="Midnight Salmon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An exquisite seafood platter featuring wild-caught king salmon with a vibrant citrus emulsion and micro-greens. The plate is white porcelain set on a dark, reflective marble table, illuminated by a soft golden glow. The composition is clean and minimalist, highlighting the fresh, premium ingredients of the fine-dining establishment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi3YVFotdisOgmuPNTfuci66NbMxa4xIUF6Bm5FgSEDgOwLsh_F4RVBaA9PXaxpCjaqNhEFUdoOkjAm1xfQfayS66Kflc91VwDkqRGYzURhaK7zFc20S8DXBtHr2eW0p5n3ZM4qNXCsTSPtKItyMytNAGfb9XI64BQbb5KzD4BpV7GvTEtYwSxSikLeHatnX2JHr6aTFjpBafO4tH1BHJsOmEza3qwwUrZfrSg0FKWi7rXiT4VSTP7qslo_XhB9hfgQs_BhwJ0pqg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-</div>
-<div class="p-8">
-<div class="flex justify-between items-start mb-4">
-<h3 class="font-h3 text-h3 text-on-surface">Midnight Salmon</h3>
-<span class="text-primary font-h3">$85</span>
-</div>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Wild-caught Alaskan salmon cured in beetroot, served with horseradish foam and caviar accents.</p>
-<button class="flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest hover:gap-4 transition-all">
-                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Dish Card 3 -->
-<div class="glass-card group cursor-pointer overflow-hidden rounded-xl transition-all hover:-translate-y-2">
-<div class="h-80 overflow-hidden relative">
-<img alt="Truffle Harvest" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artisanal handmade pasta with shaved black truffles and a rich porcini cream sauce. The dish is presented in a deep, dark bowl, capturing the steam and earthy aroma through soft, directional lighting. The color palette consists of deep blacks, earthy browns, and warm cream tones, reflecting an atmosphere of high-end culinary excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXjGkOD863HT-infUxgvWZBrI1wC0gWbpb7xBxa9p3daCPAWV1PLuMiozxT1GC_FfLPyVS58x_QBVRktKky9_PuoBXJyzaP8KFjojTWGUM33turTFRbROz_EZn4QYbhaLyxNIJ94ow072jAT4PSX5izcvqPDEzkUZG2aBbTOOvn8oU_tIRtq0aPgppmCyhS53mjrWD5EbnBmDtms7Sklj31_JMHduCOtXSc9ydDRBz3GBvDNnoUEve6ahmEFFuoIL4GJiMI1BYW0k"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-</div>
-<div class="p-8">
-<div class="flex justify-between items-start mb-4">
-<h3 class="font-h3 text-h3 text-on-surface">Truffle Harvest</h3>
-<span class="text-primary font-h3">$95</span>
-</div>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Handmade tagliatelle tossed in burnt butter, finished with freshly shaved Perigord black truffles.</p>
-<button class="flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest hover:gap-4 transition-all">
-                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- About Us Heritage Section -->
-<section class="py-section-gap bg-surface-container-low overflow-hidden">
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-<div class="relative">
-<div class="absolute -top-10 -left-10 w-40 h-40 border border-primary/20 rounded-full"></div>
-<img alt="Our Heritage" class="relative z-10 rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A portrait of a master chef in a clean, professional kitchen, meticulously plating a dish with tweezers. The environment is dark and focused, with stainless steel surfaces catching soft reflections. The image captures a sense of heritage and precision, using a moody, cinematic lighting style with deep shadows and warm highlights to convey expertise and dedication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBta5xcO2E6XI09qJVitLb2I8nV4-rDUvg28DucMI2JgiDFXmuopWvb4UCIhQEIw8HWb1vXwgd5ia_CMQ5g9L9_5l4qR4hiN6tFUbjxJkKZL__wyo6RMD8UKyQjgH1oQXmaLgwevNsteqLFrsm9MhewnLTuQg1Kufp5KQm3hwhBUzw8J78-x-un3PHcJNBIAuqUI-txx3bDmm5Nz0m41oeelYvM_Ia408A9PCd_ivYNIhNaOeWgVvwblg2g0kF7DAeqCCF4stTIAXU"/>
-<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl z-20 hidden md:block">
-<span class="block font-h1 text-[64px] text-on-primary leading-none">40</span>
-<span class="block font-label-caps text-on-primary uppercase tracking-widest">Years of Craft</span>
-</div>
-</div>
+<div class="flex justify-between items-start">
 <div>
-<span class="font-label-caps text-primary tracking-widest uppercase mb-4 block">Since 1984</span>
-<h2 class="font-h2 text-h1 text-on-surface mb-8 leading-tight">A Legacy of <br/>Gastronomic Mastery</h2>
-<p class="text-body-lg text-on-surface-variant mb-6 leading-relaxed">Founded in the heart of the culinary district, Royal Taste began as a small family bistro with a single vision: to transform seasonal ingredients into edible masterpieces. Over four decades, we have remained committed to the precision of French technique blended with local innovation.</p>
-<p class="text-body-lg text-on-surface-variant mb-10 leading-relaxed">Our kitchen is a laboratory of flavor, where tradition meets modern alchemy. Every plate we serve is a chapter of our history, curated for those who understand that dining is not just a meal, but a sensory journey through time and culture.</p>
-<div class="flex items-center gap-10">
+<p class="font-body-md text-on-surface font-semibold">Vintage Dom Pérignon</p>
+<p class="text-xs text-on-surface-variant">2012 Estate Release</p>
+</div>
+<p class="font-body-md text-primary">$295.00</p>
+</div>
+<div class="flex justify-between items-start">
 <div>
-<span class="block font-h3 text-primary">Michelin</span>
-<span class="block text-on-surface-variant font-label-caps uppercase">3 Star Rated</span>
+<p class="font-body-md text-on-surface font-semibold">Gold Leaf Caviar Parfait</p>
+<p class="text-xs text-on-surface-variant">Sustainable Beluga</p>
 </div>
-<div class="w-px h-10 bg-outline-variant/30"></div>
-<div>
-<span class="block font-h3 text-primary">Exclusive</span>
-<span class="block text-on-surface-variant font-label-caps uppercase">Member Club</span>
+<p class="font-body-md text-primary">$120.00</p>
 </div>
 </div>
+<div class="space-y-3 border-t border-outline-variant/30 pt-6">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-md">Subtotal</span>
+<span class="font-body-md">$499.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-md">Delivery Service</span>
+<span class="font-body-md">$25.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-md">Taxes &amp; Surcharge</span>
+<span class="font-body-md">$42.41</span>
+</div>
+<div class="flex justify-between text-primary font-bold text-lg pt-4 border-t border-outline-variant/10 mt-4">
+<span class="font-h3">Total</span>
+<span class="font-h3">$566.41</span>
 </div>
 </div>
-</section>
-<!-- Gallery Grid (Bento Style) -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<span class="font-label-caps text-primary tracking-widest uppercase mb-2 block">Atmosphere</span>
-<h2 class="font-h2 text-h2 text-on-surface">The Dining Experience</h2>
+<button class="w-full bg-primary text-on-primary font-label-caps uppercase py-5 rounded-full mt-8 tracking-widest font-bold hover:bg-secondary transition-all transform active:scale-[0.98]">
+                        Confirm Order
+                    </button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 uppercase tracking-tighter opacity-60">
+                        By confirming, you agree to Royal Taste's Terms of Service.
+                    </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
-<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl relative group">
-<img alt="Main Dining Hall" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A wide-angle shot of a luxurious restaurant interior at night. The ceiling is adorned with minimalist gold chandeliers that cast a warm, diffused glow over velvet booths and white linen tables. The air is slightly hazy, catching beams of light. The overall color palette is deep charcoal and gold, creating a mood of exclusive elegance and visual silence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnsE5ieGzLVZxIHnJnqTSJzAI5Tt51nv1RWpyHFcd535BKMFtIvQetDtjKrmqvDJRfAXrCCqEQHn7Se8wDhoe2v7XrEKX095P8aK9Y11V1ZtJ7gGPfxAur6oBZtiNMfaq_NQb8X8vWrU7SSEPJWvzC7BXcHBweAb1TdwkVcU4-MlQO9VotXwQiCOC74fJUGYteO5etdYOJFu4UHcV3DKlrkIIPkclyy2nHyL6rvQKYYB_Izi3t5SFHAmVzRTvCLCqTnlch_cQDqHc"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="font-label-caps text-on-primary bg-primary px-4 py-2 rounded">Main Dining Hall</span>
-</div>
-</div>
-<div class="md:col-span-1 md:row-span-1 overflow-hidden rounded-xl relative group">
-<img alt="The Lounge" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A macro shot of a dark-themed cocktail bar with a master bartender pouring a crystal-clear liquid into a coupe glass. Golden light illuminates the fine mist of a citrus zest garnish. The background features rows of premium spirits on backlit shelves, emphasizing a high-end, nocturnal lounge vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdOAyUwijBNUfRsKhxQ4QzZRUsrjyVIZdRWaofidVw24mobyMVlXvVL-QVAfFpBxFqPzeFd2qW-rPqbwfJouVSUCa4wvQYHlPbyt5Nz7FF-VaV7689_ojHklz2UGG11K3SsKQiuaR322eR-Kre02AHZlKbuT907evl8kMAMVLTZVEbrjeOrLRCR8-RqdRXEFqZztxtMfTxhK3fL3ANVFX6Zl4IaYJ2pehKL0JcbeMlrGfKdnP-orKE0qDCCj-ctuZ3BLuQX-I50c"/>
-</div>
-<div class="md:col-span-1 md:row-span-2 overflow-hidden rounded-xl relative group">
-<img alt="Dessert Art" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A vertical composition showing a decadent chocolate dessert with gold leaf and raspberry coulis on a dark matte plate. The dish is softly lit from the side, creating long shadows and highlighting the glossy textures. The aesthetic is luxurious and refined, perfectly suited for a premium culinary brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-UeiE9R87b48BvMBTSKphw6ziRHSRM1h9ebRj3S3YHfrt5GyYbgeqC9qr4yzQ0J5WPsxVFgfLwz71y3WlNg6gkCJ2feKHmPjtz5oXCmRhs9__7t7XAP0whTkGJBHq4BuqApJLBkIEi0PR1WpvhdiQscwsPcTka91n5B89oSgA_KFhJhH8avqPR-QeuEiemig_cMQuh65ocfDV91HZt4b-9H_VGT5BP_d4cIXjMhSzr3GWLunD8pU_PPywJ-DqUypCw5hglrf-qk"/>
-</div>
-<div class="md:col-span-1 md:row-span-1 overflow-hidden rounded-xl relative group">
-<img alt="Private Corner" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="An intimate table setting for two, featuring sparkling crystal glasses, polished silver cutlery, and a single white rose in a glass vase. The background is a soft-focus view of a dimly lit restaurant with amber lighting. The atmosphere is romantic and exclusive, characterized by tonal layering and luminous accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn8aks51XGiCFhq4vV4j1C5mij9Wjk9JHHfzLqR6BxlFpJqzsfzh-UG1rtOFRg85iu55MM0vFj9pADV61h5F1xbLoa9ebkca6qC2o3wIRZIVEYcae-RhoMY-hHBUwpcJbGNV6motDgRUcB_y5kadf6wEUQrLUhfvEWHcOzrtMVjs0dn-6PgaEW9DsVC2ZVhjR7JDlC_TAhwFdIZcavNFwzH4fMKnUo2poMXFmI5Gr2m1mB3xz3y0fwwuEmjMG4SoPcERU_9Waso8U"/>
+<div class="mt-8 overflow-hidden rounded-xl h-48 relative border border-outline-variant/20">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A cinematic, high-contrast aerial shot of a luxury restaurant's interior with warm amber accent lighting and deep black shadows. The scene captures the sophisticated, opulent vibe of Royal Taste, showcasing velvet booths and gold-trimmed architecture under low-key lighting. The atmosphere is exclusive, mysterious, and evokes a five-star dining experience with a modern Noir aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdbAs9OCjInDfres9sMA2bBsivZMDVo9qQ7EvWUX5NqSM-Ob1vnuIZF0JURvbJlIA_rzIiD5kBhIwaG6l-YALnynq2022j3In5X8RuIbet7Y2T00CNilbWL67gsqeUN3JikEtM0La5N0KmZyeuEKTU6mtNWPkWmDx17GP5uP1bNIObe6DJyFZbnOXPzbnhWjAQhvJ8t5kFQmZZOWEIGGqDYeR5tTFP1xAL-IEyFa4ZwY1Q5gMx0DO_wa6FQXFbdYs0u2kngtW36vM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-caps text-primary text-[10px] uppercase">Destination</p>
+<p class="font-h3 text-on-surface text-lg">Central Park Tower</p>
 </div>
 </div>
-</section>
-<!-- Testimonials -->
-<section class="py-section-gap bg-surface">
-<div class="max-w-4xl mx-auto px-margin-mobile text-center">
-<div class="mb-12">
-<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+</aside>
 </div>
-<div class="space-y-8">
-<p class="font-h2 text-h2 italic text-on-surface leading-relaxed">"An unparalleled sensory experience. Royal Taste doesn't just serve food; they curate memories with every dish. The Wagyu Reserve is quite simply the finest steak I have ever tasted in my global travels."</p>
-<div>
-<h4 class="font-label-caps text-primary tracking-[0.2em] uppercase text-lg">Julian Vance</h4>
-<span class="text-on-surface-variant font-body-md">Culinary Critic, The Urban Plate</span>
+<!-- Success Modal (Hidden by default, shown for design demonstration) -->
+<div class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-xl">
+<div class="max-w-2xl w-full mx-auto p-12 text-center space-y-8 glass-card border-primary rounded-2xl relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-2xl shadow-primary/40">
+<span class="material-symbols-outlined text-on-primary text-5xl">check</span>
+</div>
+<div class="pt-8">
+<p class="font-label-caps text-primary tracking-[0.3em] uppercase mb-4">Confirmed</p>
+<h2 class="font-h1 text-h1 text-on-surface tracking-tighter">Thank You, Julianne</h2>
+<p class="font-body-lg text-on-surface-variant mt-4 max-w-md mx-auto">Your selection is being prepared by our Executive Chef. An exclusive culinary experience awaits you.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-outline-variant/20 py-8 my-8">
+<div class="text-center border-r border-outline-variant/20">
+<p class="font-label-caps text-on-surface-variant uppercase text-[10px]">Order ID</p>
+<p class="font-h3 text-on-surface">#RT-884920</p>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-on-surface-variant uppercase text-[10px]">Estimated Arrival</p>
+<p class="font-h3 text-on-surface">8:45 PM</p>
 </div>
 </div>
-<div class="flex justify-center gap-4 mt-12">
-<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-on-surface">chevron_left</span>
-</button>
-<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-on-surface">chevron_right</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Booking CTA Section -->
-<section class="py-section-gap px-margin-desktop">
-<div class="max-w-container-max mx-auto glass-card rounded-2xl p-16 relative overflow-hidden text-center border-primary/20">
-<div class="absolute inset-0 opacity-10">
-<img alt="Kitchen Backdrop" class="w-full h-full object-cover" data-alt="A blurred background of a busy but elegant kitchen line with chefs in white uniforms working under warm pendant lights. The movement is captured as a soft motion blur, suggesting the energy and precision behind the scenes of a high-end restaurant. The overall feel is professional and high-energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4fiH7aPHtA8cEb6eJvGRZaDYC_n3JyQnJU_lGftGk3o6L6U00dS7NZGXV_8tq5bnhSZGPPQsWz3F9kpsDo8hws4Zia2tW4LwmOJr60IVS-lkcSkAcSUKSxjbVo7Gcfq33kdeipmW4mO7EcNdNfsHCXxQnKCthAWsjePQ5S3n3rRH5ox14BBc5ZV0Hzq41p_s3h_0NaKmyAeRDo68IChZBYuIaBqS6XHMylcGwcN8RsMeJkkRW5InexOkM24JhN-pZJQhLJm6oayk"/>
-</div>
-<div class="relative z-10">
-<h2 class="font-h2 text-h1 text-on-surface mb-6">Join the Inner Circle</h2>
-<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Reserve your table for an evening of culinary excellence. Limited seatings available for our signature tasting menu.</p>
-<div class="flex flex-col md:flex-row gap-gutter justify-center items-center">
-<input class="bg-surface-container border border-outline-variant text-on-surface px-6 py-4 rounded-DEFAULT w-full md:w-64 focus:border-primary outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="Select Date" type="text"/>
-<button class="bg-primary text-on-primary px-12 py-4 rounded-DEFAULT font-label-caps uppercase tracking-widest hover:brightness-110 w-full md:w-auto">Reserve Table</button>
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary font-label-caps uppercase py-4 rounded-full tracking-widest font-bold">Track Your Experience</button>
+<button class="w-full bg-transparent text-on-surface font-label-caps border border-outline-variant uppercase py-4 rounded-full tracking-widest">Return to Home</button>
 </div>
 </div>
 </div>
-</section>
 </main>
 <!-- Footer -->
 <footer class="w-full py-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col gap-6">
-<div class="font-h3 text-h3 text-primary uppercase tracking-widest font-bold">ROYAL TASTE</div>
-<p class="font-body-md text-on-surface-variant leading-relaxed">Defining culinary excellence through precision, passion, and the finest ingredients since 1984.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">social_leaderboard</span>
-<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">photo_camera</span>
-<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">share</span>
+<div class="col-span-1 md:col-span-1">
+<div class="font-h3 text-h3 text-primary uppercase tracking-widest mb-6">ROYAL TASTE</div>
+<p class="font-body-md text-on-surface-variant opacity-80 leading-relaxed italic">
+                    "Where opulence meets the art of the plate."
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-on-surface uppercase mb-6">Navigation</h4>
+<div class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Location</a>
 </div>
 </div>
-<div>
-<h4 class="font-label-caps text-on-surface uppercase tracking-widest mb-8">Navigation</h4>
-<ul class="flex flex-col gap-4">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Location</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Operating Hours</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Newsletter</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-caps text-on-surface uppercase tracking-widest mb-8">Contact Us</h4>
-<address class="not-italic flex flex-col gap-4 font-body-md text-on-surface-variant">
-<p>122 Premium Avenue<br/>Gastronomy District<br/>New York, NY 10001</p>
-<p>Reservations: +1 212 555 0198</p>
-<p>Email: concierge@royaltaste.com</p>
-</address>
-</div>
-<div>
-<h4 class="font-label-caps text-on-surface uppercase tracking-widest mb-8">Hours</h4>
-<ul class="flex flex-col gap-4 font-body-md text-on-surface-variant">
-<li class="flex justify-between"><span>Mon - Thu</span> <span>17:00 - 23:00</span></li>
-<li class="flex justify-between"><span>Fri - Sat</span> <span>17:00 - 01:00</span></li>
-<li class="flex justify-between"><span>Sunday</span> <span>12:00 - 22:00</span></li>
-</ul>
+<div class="space-y-4">
+<h4 class="font-label-caps text-on-surface uppercase mb-6">Support</h4>
+<div class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Operating Hours</a>
+<a class="hover:text-primary transition-colors" href="#">Newsletter</a>
 </div>
 </div>
-<div class="mt-section-gap border-t border-outline-variant/10 pt-8 text-center px-margin-desktop max-w-container-max mx-auto">
-<p class="font-body-md text-on-surface-variant opacity-80 uppercase tracking-widest">© 2024 ROYAL TASTE. DEFINING CULINARY EXCELLENCE.</p>
+<div class="space-y-6">
+<h4 class="font-label-caps text-on-surface uppercase">Join The Inner Circle</h4>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-b border-outline-variant/40 py-3 text-sm focus:border-primary outline-none transition-all pr-12" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary font-bold">JOIN</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-8 border-t border-outline-variant/5 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 uppercase tracking-[0.2em] text-[10px]">
+                © 2024 ROYAL TASTE. DEFINING CULINARY EXCELLENCE.
+            </p>
 </div>
 </footer>
 </body></html>
